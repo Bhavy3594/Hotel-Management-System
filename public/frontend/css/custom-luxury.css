@@ -1,0 +1,532 @@
+/* ==========================================================================
+   SEAPLACE LUXURY HOTEL — PREMIUM UI/UX CUSTOM STYLES & VIDEO EXPLORER
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-gold: #c5a880;
+  --primary-gold-hover: #b09168;
+  --primary-dark: #0b132b;
+  --secondary-dark: #1c2541;
+  --accent-blue: #3a506b;
+  --text-dark: #222222;
+  --text-muted: #666666;
+  --bg-light: #f9fbfd;
+  --card-shadow: 0 15px 35px rgba(11, 19, 43, 0.08);
+  --card-shadow-hover: 0 22px 45px rgba(11, 19, 43, 0.16);
+  --transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-gold-hover);
+}
+
+body {
+  font-family: var(--font-body) !important;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .section-intro h2, .card-news__title, .header_area .nav-link {
+  font-family: var(--font-heading);
+}
+
+/* Header & Navigation Upgrade */
+.header_area {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: var(--transition-smooth);
+}
+
+.header-top {
+  background: var(--primary-dark) !important;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.header-top a {
+  color: var(--primary-gold) !important;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.header-top a:hover {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.header-top-info__icon {
+  color: var(--primary-gold) !important;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.main_menu .navbar .nav .nav-item .nav-link {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--secondary-dark) !important;
+  padding: 25px 16px !important;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.main_menu .navbar .nav .nav-item.active .nav-link,
+.main_menu .navbar .nav .nav-item:hover .nav-link {
+  color: var(--primary-gold) !important;
+}
+
+.main_menu .navbar .nav .nav-item.active .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 16px;
+  right: 16px;
+  height: 2px;
+  background-color: var(--primary-gold);
+  border-radius: 2px;
+}
+
+.dropdown-menu {
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
+  border-radius: 12px !important;
+  padding: 10px 0 !important;
+}
+
+.dropdown-item.active, .dropdown-item:active, .dropdown-menu .nav-item.active .nav-link {
+  background-color: rgba(197, 168, 128, 0.12) !important;
+  color: var(--primary-gold) !important;
+  font-weight: 600 !important;
+}
+
+/* Banner Hero & Inner Page Banners */
+.home-banner-area {
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
+  padding: 180px 0 140px 0;
+}
+
+.home-banner-area::before,
+.inner-page-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(11, 19, 43, 0.7) 0%, rgba(11, 19, 43, 0.85) 100%);
+}
+
+.inner-page-banner {
+  position: relative;
+  background-size: cover !important;
+  background-position: center center !important;
+  padding: 130px 0 85px 0;
+}
+
+.inner-page-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.home-banner {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.home-banner h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.home-banner h4 {
+  font-size: 1.25rem;
+  color: var(--primary-gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.button-hero {
+  background: var(--primary-gold);
+  color: #ffffff !important;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline-block;
+  box-shadow: 0 10px 25px rgba(197, 168, 128, 0.4);
+  transition: var(--transition-smooth);
+  border: none;
+  cursor: pointer;
+}
+
+.button-hero:hover {
+  background: var(--primary-gold-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(197, 168, 128, 0.5);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   INTERACTIVE PROPERTY EXPLORER VIDEO SHOWCASE
+   ========================================================================== */
+.property-video-section {
+  position: relative;
+  background: url('../img/home/video-bg.png') center center / cover no-repeat;
+  padding: 110px 0;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.property-video-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(11, 19, 43, 0.78) 0%, rgba(11, 19, 43, 0.92) 100%);
+}
+
+.property-video-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* Pulsing Video Play Trigger */
+.pulse-play-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--primary-gold);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  position: relative;
+  transition: var(--transition-smooth);
+  box-shadow: 0 0 0 0 rgba(197, 168, 128, 0.7);
+  animation: pulse-gold 2s infinite;
+  text-decoration: none !important;
+}
+
+.pulse-play-btn:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+  color: var(--primary-gold);
+
+}
+
+@keyframes pulse-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(197, 168, 128, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 25px rgba(197, 168, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(197, 168, 128, 0);
+  }
+}
+
+/* Property Chapter Explorer Badges */
+.property-chapter-badge {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  margin: 6px;
+  transition: var(--transition-smooth);
+}
+
+.property-chapter-badge:hover {
+  background: var(--primary-gold);
+  border-color: var(--primary-gold);
+  color: #ffffff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.property-chapter-badge i {
+  color: var(--primary-gold);
+  margin-right: 8px;
+  transition: var(--transition-smooth);
+}
+
+.property-chapter-badge:hover i {
+  color: #ffffff;
+}
+
+/* Form Search Bar — Booking Inquiry */
+.form-search-position {
+  margin-top: -40px;
+  position: relative;
+  bottom: auto !important;
+  z-index: 10;
+}
+
+.form-search {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.form-search .form-control,
+.form-search .nice-select {
+  height: 52px !important;
+  line-height: 50px !important;
+  border-radius: 10px !important;
+  border: 1px solid #e2e8f0 !important;
+  font-size: 14px !important;
+  color: var(--text-dark) !important;
+  background-color: #f8fafc !important;
+  padding-left: 18px !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.form-search .form-control:focus,
+.form-search .nice-select:focus {
+  border-color: var(--primary-gold) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(197, 168, 128, 0.15) !important;
+  outline: none !important;
+}
+
+.form-search button[type="submit"] {
+  height: 52px;
+  border-radius: 10px;
+  background: var(--primary-gold);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  border: none;
+  width: 100%;
+  transition: var(--transition-smooth);
+  box-shadow: 0 8px 20px rgba(197, 168, 128, 0.35);
+  cursor: pointer;
+}
+
+.form-search button[type="submit"]:hover {
+  background: var(--primary-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(197, 168, 128, 0.45);
+}
+
+/* Section Header Styling */
+.section-intro {
+  margin-bottom: 50px;
+}
+
+.section-intro .section-intro__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  position: relative;
+  display: inline-block;
+}
+
+.section-intro .section-intro__title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-gold);
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* Accommodations & Room Cards */
+.card-explore {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+  background: #ffffff;
+  margin-bottom: 30px;
+}
+
+.card-explore:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card-explore__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-explore__img img {
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+
+.card-explore:hover .card-explore__img img {
+  transform: scale(1.06);
+}
+
+.card-explore__price {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: var(--primary-dark);
+  color: var(--primary-gold);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 8px 18px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-explore__price span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+.card-explore .card-body {
+  padding: 25px;
+}
+
+.card-explore .card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.card-explore .card-title a {
+  color: var(--primary-dark);
+  transition: var(--transition-smooth);
+}
+
+.card-explore .card-title a:hover {
+  color: var(--primary-gold);
+  text-decoration: none;
+}
+
+/* Alert Notification Banners */
+.alert {
+  border-radius: 12px !important;
+  border: none !important;
+  padding: 16px 22px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+.alert-success {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+  border-left: 5px solid #10b981 !important;
+}
+
+.alert-danger {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+  border-left: 5px solid #ef4444 !important;
+}
+
+/* Footer Styling Upgrade */
+.footer-area {
+  background: var(--primary-dark) !important;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 80px 0 30px 0;
+}
+
+.single-footer-widget h4 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.single-footer-widget h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background: var(--primary-gold);
+}
+
+.single-footer-widget ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition-smooth);
+  font-size: 14px;
+}
+
+.single-footer-widget ul li a:hover {
+  color: var(--primary-gold);
+  padding-left: 5px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  margin-top: 50px;
+}
+
+.footer-social a {
+  background: rgba(255, 255, 255, 0.08);
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  text-center: center;
+  margin-left: 6px;
+  transition: var(--transition-smooth);
+}
+
+.footer-social a:hover {
+  background: var(--primary-gold);
+  color: #ffffff;
+  transform: translateY(-3px);
+}

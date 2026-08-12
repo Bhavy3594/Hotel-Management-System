@@ -1,0 +1,68 @@
+# CodeRabbit AI Configuration File
+# Project: Hotel Management System (Laravel 10)
+
+version: "2"
+language: "en-US"
+tone_instructions: "Be concise, analytical, security-focused, and adhere strictly to PSR-12 and Laravel best practices."
+
+reviews:
+  profile: "assertive"
+  request_tools:
+    - name: "php-cs-fixer"
+    - name: "phpstan"
+  auto_review:
+    enabled: true
+    ignore_drafts: true
+    patterns:
+      - "app/**/*.php"
+      - "routes/*.php"
+      - "database/**/*.php"
+      - "resources/views/**/*.blade.php"
+      - "config/*.php"
+
+  rules:
+    # 1. Code Quality & Standards
+    - id: "psr-12-compliance"
+      name: "PSR-12 Standard Compliance"
+      severity: "medium"
+      description: "Ensure all PHP code in controllers, models, and migrations strictly complies with PSR-12 code formatting guidelines."
+
+    - id: "type-declarations"
+      name: "Strict Type & Return Signatures"
+      severity: "medium"
+      description: "Validate return types and parameter types across all controller actions and model methods."
+
+    # 2. Security Audit (OWASP Top 10)
+    - id: "sql-injection-prevention"
+      name: "SQL Injection Prevention"
+      severity: "critical"
+      description: "Ensure all database queries use Eloquent ORM bindings, Query Builder parameters, or sanitized input. Avoid raw unescaped SQL expressions."
+
+    - id: "xss-prevention"
+      name: "XSS Prevention in Blade Views"
+      severity: "high"
+      description: "Verify Blade templates use double curly braces {{ $var }} for output escaping. Avoid raw output {!! $var !!} unless explicitly sanitized."
+
+    - id: "csrf-protection"
+      name: "CSRF Directive Enforcement"
+      severity: "high"
+      description: "Enforce @csrf directive inside all state-changing HTML forms (<form method='POST'>)."
+
+    - id: "mass-assignment-guard"
+      name: "Mass Assignment Protection"
+      severity: "high"
+      description: "Ensure Eloquent models explicitly define $fillable or $guarded attributes to prevent illegal parameter injection during Model::create() or update()."
+
+    # 3. Database & Performance Optimization
+    - id: "n-plus-one-query-detection"
+      name: "N+1 Query Detection"
+      severity: "high"
+      description: "Detect un-eager-loaded Eloquent relationships inside Blade view loops (@foreach) or controller iterations."
+
+    - id: "database-indexing"
+      name: "Foreign Key Indexing"
+      severity: "medium"
+      description: "Verify foreign key columns in database migrations have corresponding database indexes."
+
+chat:
+  auto_reply: true
