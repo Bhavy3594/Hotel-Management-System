@@ -80,7 +80,7 @@ Hotel-Management-System/
 ### Setup Steps
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Bhavy3594/Hotel-Management-System.git
+   git clone https://github.com/BhavyAtkotiya/Hotel-Management-System.git
    cd Hotel-Management-System
    ```
 2. **Install PHP Dependencies:**
