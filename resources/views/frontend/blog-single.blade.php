@@ -10,13 +10,6 @@
       <div class="blog-banner">
         <div class="text-center text-white">
           <h1 class="text-white font-weight-bold display-4">Journal Article</h1>
-          <nav aria-label="breadcrumb" class="banner-breadcrumb mt-3">
-            <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0">
-              <li class="breadcrumb-item"><a href="{{ url('/') }}" class="text-white-50">Home</a></li>
-              <li class="breadcrumb-item"><a href="{{ url('/blog') }}" class="text-white-50">Journal</a></li>
-              <li class="breadcrumb-item active text-gold" style="color: var(--primary-gold);" aria-current="page">Story</li>
-            </ol>
-          </nav>
         </div>
       </div>
     </div>

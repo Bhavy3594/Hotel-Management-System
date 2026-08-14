@@ -118,4 +118,48 @@ Hotel-Management-System/
 
 ## 📄 License
 
-This project is open-source software licensed under the **MIT License** — see the [LICENSE](LICENSE) file.
+## 🧪 Testing & Empirical Verification
+
+The project includes unit and feature test coverage for all primary user interaction endpoints (`/contact-submit`, `/check-availability`, `/newsletter-submit`, `/comment-submit`).
+
+To execute the test suite:
+
+```bash
+php artisan test
+```
+
+**Test Results:**
+```text
+  PASS  Tests\Unit\ExampleTest
+  ✓ that true is true
+
+  PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response
+
+  PASS  Tests\Feature\HotelFormSubmissionsTest
+  ✓ homepage and all pages load successfully
+  ✓ contact page loads and accepts submission
+  ✓ newsletter subscription works
+  ✓ booking inquiry submission works
+  ✓ blog comment submission works
+
+  Tests: 7 passed (23 assertions)
+```
+
+---
+
+## 📄 Documentation & Assets
+
+Comprehensive project documentation and presentation files are organized in the [`docs/`](file:///c:/laragon/www/hotel/hotel/docs) directory:
+- **Presentation Deck**: `docs/Hotel ABC – Hotel Management System Using Laravel.pptx`
+- **System Documentation**: `docs/Hotel-ABC-Documentation.doc`
+- **System Screenshots**: `docs/images/preview.png`
+
+---
+
+## 👤 Author & License
+
+- **Author**: [Bhavya](https://github.com/Bhavy3594)
+- **GitHub**: [@Bhavy3594](https://github.com/Bhavy3594)
+- **License**: Open-sourced software under the [MIT License](LICENSE).
+

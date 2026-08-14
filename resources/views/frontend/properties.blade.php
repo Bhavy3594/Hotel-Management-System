@@ -10,12 +10,6 @@
       <div class="contact-banner">
         <div class="text-center text-white">
           <h1 class="text-white font-weight-bold display-4">Rooms & Accommodations</h1>
-          <nav aria-label="breadcrumb" class="banner-breadcrumb mt-3">
-            <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0">
-              <li class="breadcrumb-item"><a href="{{ url('/') }}" class="text-white-50">Home</a></li>
-              <li class="breadcrumb-item active text-gold" style="color: var(--primary-gold);" aria-current="page">Accommodations</li>
-            </ol>
-          </nav>
         </div>
       </div>
     </div>
@@ -109,7 +103,7 @@
                 <h4 class="card-title"><a href="{{ route('properties.single') }}">Classic Ocean Suite</a></h4>
                 <p class="text-muted">Plush king bed, private sea view balcony, luxury marble bath, and complimentary Wi-Fi.</p>
               </div>
-              <a class="button button-hero btn-block text-center mt-3" href="{{ url('/contact') }}">Reserve Suite</a>
+              <a class="button button-hero btn-block text-center mt-3" href="{{ route('properties.single') }}">Explore & Reserve Suite</a>
             </div>
           </div>
         </div>
@@ -126,7 +120,7 @@
                 <h4 class="card-title"><a href="{{ route('properties.single') }}">Premium Horizon Room</a></h4>
                 <p class="text-muted">Panoramic floor-to-ceiling sea views, soaking tub, executive desk, and espresso bar.</p>
               </div>
-              <a class="button button-hero btn-block text-center mt-3" href="{{ url('/contact') }}">Reserve Suite</a>
+              <a class="button button-hero btn-block text-center mt-3" href="{{ route('properties.single') }}">Explore & Reserve Suite</a>
             </div>
           </div>
         </div>
@@ -143,7 +137,7 @@
                 <h4 class="card-title"><a href="{{ route('properties.single') }}">Family Penthouse Suite</a></h4>
                 <p class="text-muted">Two king bedrooms, spacious lounge, private terrace, and 24/7 butler service.</p>
               </div>
-              <a class="button button-hero btn-block text-center mt-3" href="{{ url('/contact') }}">Reserve Suite</a>
+              <a class="button button-hero btn-block text-center mt-3" href="{{ route('properties.single') }}">Explore & Reserve Suite</a>
             </div>
           </div>
         </div>
@@ -160,7 +154,7 @@
                 <h4 class="card-title"><a href="{{ route('properties.single') }}">Single Executive Room</a></h4>
                 <p class="text-muted">Refined room designed for business solo travelers, high-speed fiber internet, and workspace.</p>
               </div>
-              <a class="button button-hero btn-block text-center mt-3" href="{{ url('/contact') }}">Reserve Suite</a>
+              <a class="button button-hero btn-block text-center mt-3" href="{{ route('properties.single') }}">Explore & Reserve Suite</a>
             </div>
           </div>
         </div>
@@ -177,7 +171,7 @@
                 <h4 class="card-title"><a href="{{ route('properties.single') }}">Beachfront Villa Suite</a></h4>
                 <p class="text-muted">Private coastal villa featuring outdoor plunge pool, direct sand access, and sun deck.</p>
               </div>
-              <a class="button button-hero btn-block text-center mt-3" href="{{ url('/contact') }}">Reserve Suite</a>
+              <a class="button button-hero btn-block text-center mt-3" href="{{ route('properties.single') }}">Explore & Reserve Suite</a>
             </div>
           </div>
         </div>
@@ -194,7 +188,7 @@
                 <h4 class="card-title"><a href="{{ route('properties.single') }}">Royal Presidential Suite</a></h4>
                 <p class="text-muted">The ultimate luxury experience: double height ceilings, master jacuzzi, and private chef.</p>
               </div>
-              <a class="button button-hero btn-block text-center mt-3" href="{{ url('/contact') }}">Reserve Suite</a>
+              <a class="button button-hero btn-block text-center mt-3" href="{{ route('properties.single') }}">Explore & Reserve Suite</a>
             </div>
           </div>
         </div>
